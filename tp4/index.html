@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP4 - Sélecteurs Avancés</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+      <h1>Travaux Pratiques 4</h1>
+      <p>Techniques CSS : Target & Sélecteurs d'attributs</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../tp1/index.html">TP1</a></li>
+      <li><a href="../tp2/index.html">TP2</a></li>
+      <li><a href="../tp3/index.html">TP3</a></li>
+      <li><a href="index.html" class="active">TP4</a></li>
+      <li><a href="../tp5/index.html">TP5</a></li>
+      <li><a href="../tp6/index.html">TP6</a></li>
+      <li><a href="../tp7/index.html">TP7</a></li>
+      <li><a href="../tp8/index.html">TP8</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <p><a href="../index.html">← Retour à l'accueil</a></p>
+    </section>
+
+    <article class="exercice">
+      <h2>Exercice 1 : </h2>
+      
+      <div class="demo-container">
+        <iframe src="ex1.html" title="Exercice 1 Target"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> Dans cet exercice, j'ai créé un système de navigation par onglets <strong>sans utiliser de JavaScript</strong>. J'ai utilisé <code>position: fixed</code> pour figer le menu à gauche, et surtout la pseudo-classe CSS <code>:target</code>.<br>
+          <strong>Technique :</strong> Par défaut, les paragraphes sont cachés (`display: none`). Lorsqu'on clique sur un lien, l'URL change (ex: #paragraphe1), ce qui active le CSS <code>div:target p { display: block; }</code> sur l'élément ciblé.<br>
+          <strong>Intérêt :</strong> Cela montre qu'on peut créer de l'interactivité (afficher/masquer du contenu) uniquement avec du CSS, ce qui est très performant.
+        </p>
+      </div>
+    </article>
+
+    <article class="exercice">
+      <h2>Exercice 2 : </h2>
+      
+      <div class="demo-container">
+        <iframe src="ex2/ex2.html" title="Exercice 2 Attributs"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> J'ai utilisé les <strong>sélecteurs d'attributs avancés</strong> (ex: <code>[href$=".pdf"]</code>) pour cibler les liens en fonction de l'extension du fichier pointé. J'ai combiné cela avec les pseudo-éléments <code>::before</code> et <code>::after</code> pour injecter du contenu (texte et icônes) automatiquement via CSS.<br>
+          <strong>Difficulté :</strong> Niveau <strong>intermédiaire</strong>. Il faut comprendre que le HTML est volontairement vide et que c'est le CSS qui "remplit" les liens en lisant leurs attributs `href` et `hreflang`.<br>
+          <strong>Intérêt :</strong> C'est une technique puissante pour l'automatisation et la maintenance. Si je change un fichier PDF par un Word, l'icône et le texte changent tout seuls sans que je modifie le texte du lien.<br>
+          <strong>Qualité :</strong> Le code est propre et sémantique. Les liens sont standardisés et l'utilisateur a un repère visuel immédiat sur le type de document qu'il va télécharger.
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>Développement Front MMI 2</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP1 - HTML & CSS Zen Garden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+      <h1>Travaux Pratiques 1</h1>
+      <p>Bases du HTML et contraintes CSS</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="index.html" class="active">TP1</a></li>
+      <li><a href="../tp2/index.html">TP2</a></li>
+      <li><a href="../tp3/index.html">TP3</a></li>
+      <li><a href="../tp4/index.html">TP4</a></li>
+      <li><a href="../tp5/index.html">TP5</a></li>
+      <li><a href="../tp6/index.html">TP6</a></li>
+      <li><a href="../tp7/index.html">TP7</a></li>
+      <li><a href="../tp8/index.html">TP8</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <p><a href="../index.html">← Retour à l'accueil</a></p>
+    </section>
+
+    <article class="exercice">
+      <h2>Exercice 1 : Mémo Flexbox (Cheat Sheet)</h2>
+      
+      <div class="demo-container">
+        <iframe src="ex1/index.html" title="Flexbox Cheat Sheet"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> Ici, l'objectif n'était pas de construire une page web classique, mais de structurer de la donnée technique. J'ai dû organiser visuellement les propriétés du module <strong>Flexbox</strong> en distinguant clairement le conteneur parent des éléments enfants via des tableaux HTML.<br>
+          
+          <strong>Difficulté :</strong> Moins complexe techniquement que de la logique pure, la difficulté résidait dans la rigueur de l'intégration. Il fallait gérer la densité d'informations textuelles sans surcharger la page, tout en gardant un code HTML sémantique et propre.<br>
+          
+          <strong>Intérêt :</strong> C'est sans doute l'exercice le plus "rentable" à long terme. Plutôt que de coder une page jetable, j'ai créé mon propre outil de référence. Cela m'a forcé à visualiser concrètement la différence fondamentale entre les axes (Main vs Cross) que je confondais souvent.<br>
+          
+          <strong>Qualité :</strong> Le résultat est un document technique fonctionnel. L'utilisation de classes utilitaires pour les couleurs (vert/rouge) rend la lecture instantanée et facilite la mémorisation des concepts.
+        </p>
+      </div>
+    </article>
+
+    <article class="exercice">
+      <h2>Exercice 2 : Mise en page contrainte (CSS seul)</h2>
+      
+      <div class="demo-container">
+        <iframe src="ex2/index.html" title="Exercice CSS pur"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> L'épreuve ici était de reproduire une maquette <strong>sans toucher une seule ligne de HTML</strong>. J'ai dû ruser avec le CSS, notamment en utilisant les propriétés <code>background</code> pour placer les images de décoration et le positionnement relatif/absolu.<br>
+          <strong>Difficulté :</strong> C'est le type d'exercice que je trouve le plus "scolaire" et fastidieux car il exige une précision extrême. J'ai rencontré des difficultés pour aligner parfaitement le texte sans pouvoir modifier la structure de la page.<br>
+          <strong>Intérêt :</strong> Malgré la contrainte, cela m'a forcé à mieux comprendre le <strong>flux du document</strong> et à réaliser à quel point le CSS peut transformer radicalement l'apparence d'un contenu brut.<br>
+          <strong>Qualité :</strong> Le résultat respecte la maquette imposée, prouvant qu'on peut séparer totalement le fond (HTML) de la forme (CSS).
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>Développement Front MMI 2</p>
+  </footer>
+
+</body>
+</html>

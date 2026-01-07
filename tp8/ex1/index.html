@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1 - Animation Canvas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* Fond sombre pour s'intégrer au portfolio */
+            background-color: #0f172a; 
+            color: white;
+            font-family: sans-serif;
+            /* Centrage vertical et horizontal du canvas */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Évite les barres de défilement si le perso bouge trop */
+        }
+
+        canvas {
+            /* Bordure blanche discrète pour délimiter la zone de jeu */
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background-color: #6abf4b; /* Couleur herbe par défaut si l'image charge mal */
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="game" width="600" height="400"></canvas>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

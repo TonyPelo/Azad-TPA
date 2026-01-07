@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP7 - Canvas & Animations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+      <h1>Travaux Pratiques 7</h1>
+      <p>Dessin Canvas et Animations CSS</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../tp1/index.html">TP1</a></li>
+      <li><a href="../tp2/index.html">TP2</a></li>
+      <li><a href="../tp3/index.html">TP3</a></li>
+      <li><a href="../tp4/index.html">TP4</a></li>
+      <li><a href="../tp5/index.html">TP5</a></li>
+      <li><a href="../tp6/index.html">TP6</a></li>
+      <li><a href="index.html" class="active">TP7</a></li>
+      <li><a href="../tp8/index.html">TP8</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <p><a href="../index.html">← Retour à l'accueil</a></p>
+    </section>
+
+    <article class="exercice">
+      <h2>Exercice 1 : Figures Géométriques (Canvas)</h2>
+      
+      <div class="demo-container">
+        <iframe src="ex1/index.html" title="Canvas Figures"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> Cet exercice met en jeu l'API Canvas et son contexte 2D. J'ai manipulé les coordonnées cartésiennes (X, Y) et les méthodes de tracé (`beginPath`, `arc`, `lineTo`).<br>
+          <strong>Difficulté :</strong> J'estime le niveau <strong>moyen</strong>. La logique mathématique pour placer les points (comme pour la poule) demande de la rigueur.<br>
+          <strong>Intérêt :</strong> C'est fondamental pour comprendre le dessin programmatique pixel par pixel, utile pour la visualisation de données ou les jeux.<br>
+          <strong>Qualité :</strong> Je suis satisfait du résultat. Le code est bien structuré avec une fonction par figure, ce qui le rend clair et maintenable.
+        </p>
+      </div>
+    </article>
+
+    <article class="exercice">
+      <h2>Exercice 3 : Interactivité DOM & Canvas</h2>
+      
+      <div class="demo-container">
+        <iframe src="ex3/index.html" title="Exercice 3 Interactif"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> J'ai connecté le DOM (boutons HTML) au Canvas. J'ai appris à gérer un "état" (variables couleur, taille) et à redessiner la scène après un <code>clearRect()</code>.<br>
+          <strong>Difficulté :</strong> Niveau <strong>moyen</strong>. Il faut bien comprendre qu'on ne modifie pas un objet existant, mais qu'on efface et redessine tout à chaque clic.<br>
+          <strong>Intérêt :</strong> C'est la base de toute interactivité graphique avancée. Indispensable pour créer des applications dynamiques.<br>
+          <strong>Qualité :</strong> Le code est fonctionnel et réactif. L'interaction entre l'interface utilisateur et la zone de dessin fonctionne sans erreur.
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>Développement Front MMI 2</p>
+  </footer>
+
+</body>
+</html>

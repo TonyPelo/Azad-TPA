@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 6 – Effet de Parallaxe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="parallax" data-speed="0.3">
+    <img src="img/parallax1.jpg" class="bg" alt="Image de parallaxe 1">
+    <div class="overlay">
+      <h1>Créer un effet de parallaxe</h1>
+      <p>
+        Cette page montre un véritable effet de parallaxe et explique
+        étape par étape comment le réaliser.
+      </p>
+    </div>
+  </section>
+
+  <section class="text">
+    <h2>1. Qu’est-ce qu’un effet de parallaxe&nbsp;?</h2>
+    <p>
+      L'effet de parallaxe est une technique visuelle où l’arrière-plan
+      se déplace plus lentement que le premier plan lors du défilement
+      de la page.
+    </p>
+    <p>
+      Ce décalage reproduit la manière dont notre œil perçoit la profondeur :
+      les objets proches semblent bouger plus vite que les objets éloignés.
+    </p>
+    <p>
+      Sur une page web, on obtient cet effet en déplaçant une image selon
+      la position du défilement.
+    </p>
+  </section>
+
+  <section class="parallax" data-speed="0.15">
+    <img src="img/parallax2.jpg" class="bg" alt="Image de parallaxe 2">
+    <div class="overlay">
+      <h2>2. Structure HTML</h2>
+      <p>
+        Une section parallaxe contient une image d’arrière-plan
+        et un bloc de texte placé au-dessus.
+      </p>
+    </div>
+  </section>
+
+  <section class="text">
+    <h2>2. Structure HTML utilisée</h2>
+    <p>Chaque section parallaxe suit cette structure :</p>
+
+    <pre><code>&lt;section class="parallax" data-speed="0.3"&gt;
+  &lt;img src="img/parallax1.jpg" class="bg"&gt;
+  &lt;div class="overlay"&gt; ... &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+    <p>
+      L’attribut <code>data-speed</code> permet de modifier la vitesse
+      du mouvement de l’image. Une valeur faible = déplacement lent =
+      effet plus subtil.
+    </p>
+  </section>
+
+  <section class="parallax" data-speed="0.25">
+    <img src="img/parallax3.jpg" class="bg" alt="Image de parallaxe 3">
+    <div class="overlay">
+      <h2>3. Le JavaScript</h2>
+      <p>
+        Le script déplace l’image selon le défilement de la page.
+      </p>
+    </div>
+  </section>
+  
+  <footer style="text-align: center; padding: 20px; background: #fff;">
+    <p>Fin de la démonstration Parallaxe</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

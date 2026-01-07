@@ -1,0 +1,80 @@
+/* 1. (FOND BLANC) */
+body {
+  background: white;
+  margin: 20px;
+  font-family: sans-serif;
+}
+
+/* 2. CONTENEUR BANNIÈRE */
+.banner {
+  width: 728px;
+  height: 90px;
+  background: #050509; /* Fond sombre pour faire ressortir le texte et le néon */
+  position: relative;
+  overflow: hidden;    /* Coupe l'image qui arrive de l'extérieur */
+  border: 1px solid #000;
+  
+  /* Flexbox pour aligner le texte verticalement */
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+/* 3. TEXTES & ANIMATIONS SIMPLES */
+.title {
+  margin: 0;
+  font-size: 28px;
+  color: #0af; /* Bleu néon */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #77c8ff;
+  
+}
+
+/* Keyframes pour les textes */
+@keyframes fadeInTitle {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInSub {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* 4. IMAGE & CHAUSSURE */
+.shoe-wrapper {
+  position: absolute;
+  right: -50px; /* Départ hors champ */
+  top: 0;
+  height: 100%;
+  width: 250px;
+  
+  
+}
+
+.shoe {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  transform: rotate(-15deg);
+}
+
+
+
+/* Keyframes pour l'image */
+@keyframes slideInShoe {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-50px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}

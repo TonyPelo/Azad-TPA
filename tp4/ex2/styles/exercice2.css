@@ -1,0 +1,65 @@
+body {
+  background-color: #ccc;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#telechargement {
+  width: 600px;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+
+#telechargement li {
+  border-bottom: 2px solid black;
+  padding: 15px 0;
+}
+
+/* Style commun pour les liens */
+#telechargement a {
+  display: inline-block;
+  padding-left: 50px;       /* place pour l’icône */
+  line-height: 32px;        /* aligne le texte avec l’icône */
+  text-decoration: none;
+  color: #000;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+/* Ajouter le nom du fichier via ::before */
+#telechargement a[href$=".pdf"]::before { content: "unDocumentpdf.pdf "; }
+#telechargement a[href$=".doc"]::before { content: "unDocumentWord.doc "; }
+#telechargement a[href$=".xls"]::before { content: "unDocumentExcel.xls "; }
+#telechargement a[href$=".png"]::before { content: "uneImagepng.png "; }
+#telechargement a[href$=".rtf"]::before { content: "unDocumentrtf.rtf "; }
+#telechargement a[href$=".zip"]::before { content: "uneArchivezip.zip "; }
+#telechargement a[href$=".svg"]::before { content: "uneImagesvg.svg "; }
+#telechargement a[href$=".ods"]::before { content: "unfichierOOo.ods "; }
+#telechargement a[href$=".ppt"]::before { content: "unfichierpowerPoint.ppt "; }
+
+/* Icônes selon l’extension (à remplacer par tes images locales) */
+#telechargement a[href$=".pdf"]  { background-image: url("../icones/pdf.png"); }
+#telechargement a[href$=".doc"]  { background-image: url("../icones/doc.png"); }
+#telechargement a[href$=".xls"]  { background-image: url("../icones/xls.png"); }
+#telechargement a[href$=".png"]  { background-image: url("../icones/png.png"); }
+#telechargement a[href$=".rtf"]  { background-image: url("../icones/rtf.png"); }
+#telechargement a[href$=".zip"]  { background-image: url("../icones/zip.png"); }
+#telechargement a[href$=".svg"]  { background-image: url("../icones/svg.png"); }
+#telechargement a[href$=".ods"]  { background-image: url("../icones/ods.png"); }
+#telechargement a[href$=".ppt"]  { background-image: url("../icones/ppt.png"); }
+
+/* Ajouter les drapeaux selon hreflang */
+#telechargement a[hreflang="fr"]::after {
+  content: url("../images/fr.png");
+  margin-left: 5px;
+}
+
+#telechargement a[hreflang="en"]::after {
+  content: url("../images/en.png");
+  margin-left: 5px;
+}

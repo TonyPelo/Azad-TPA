@@ -1,0 +1,116 @@
+/* CONFIGURATION GLOBALE
+   Centrage du contenu au milieu de la fenêtre */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    min-height: 100vh;       
+    margin: 0;
+    font-family: sans-serif; 
+}
+
+
+
+/* NotaBene Azad Utilise Iframe.
+
+
+/* CONTENEUR DE LA GRILLE (PARENT)
+   Définition de la structure */
+#container {
+    display: grid;
+
+    /* Définition explicite de la grille : 5 colonnes et 5 lignes de 150px */
+    /* Cela remplace les 'min-width' sur les enfants pour une structure plus rigide */
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(5, 150px);
+
+    /* Définition des zones nommées (Mapping visuel) */
+    /* Chaque nom correspond à une 'grid-area' définie plus bas */
+    grid-template-areas: 
+        "item7 item7 item7 item7 item6"
+        "item8 item3 item3 item2 item6"
+        "item8 item4 item1 item2 item6"
+        "item8 item4 item5 item5 item5"
+        "item8 item9 item9 item9 item9";
+    
+    /* Optionnel : Ajout d'espacement pour visualiser les blocs (si demandé) */
+    /* gap: 2px; */
+}
+
+/*   STYLE DES ITEMS (ENFANTS DIRECTS)
+   Mise en forme du contenu des cases */
+#container > div {
+    /* Utilisation de Flexbox pour centrer le cercle (p) à l'intérieur de la case */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Style du texte */
+    font-size: 40px;
+    font-weight: 500;
+    
+    /* Les dimensions sont désormais gérées par le parent (#container) */
+}
+
+/* STYLE DES CERCLES (PARAGRAPHES)
+   Élément décoratif contenant le numéro*/
+p {
+    background-color: white;
+    
+    /* Dimensionnement relatif à la case parente */
+    width: 30%; 
+    
+    /* Astuce moderne : aspect-ratio: 1 assure un carré parfait quelle que soit la largeur */
+    aspect-ratio: 1;
+    
+    /* Transformation du carré en cercle */
+    border-radius: 50%;
+    
+    /* Centrage du numéro à l'intérieur du cercle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    
+    /* Ombre portée pour le relief (touche esthétique supplémentaire) */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ASSIGNATION DES ZONES (MAPPING)
+   Lien entre l'ID HTML et le nom dans grid-template-areas */
+
+#item1 { 
+    background-color: #ff8800; 
+    grid-area: item1; }
+
+#item2 { 
+    background-color: #bbff02; 
+    grid-area: item2; }
+
+#item3 { 
+    background-color: #48ff00; 
+    grid-area: item3; }
+
+#item4 { 
+    background-color: #002fff; 
+    grid-area: item4; }
+
+#item5 { 
+    background-color: #f0a4ff; 
+    grid-area: item5; }
+
+#item6 { 
+    background-color: #00ffaa; 
+    grid-area: item6; }
+
+#item7 { 
+    background-color: #fafc85; 
+    grid-area: item7; }
+
+#item8 { 
+    background-color: #3c7274; 
+    grid-area: item8; }
+
+#item9 { 
+    background-color: #02ffff; 
+    grid-area: item9; }

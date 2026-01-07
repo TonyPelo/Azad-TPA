@@ -1,0 +1,113 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e4e4e4; /* gris clair comme dans le PDF */
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- VERSION LARGE (MENU HORIZONTAL) ---------- */
+
+#header {
+  background-color: #d3d3d3; /* bande grise haute */
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+}
+
+/* menu horizontal */
+#header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+#header nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#header nav a:hover {
+  text-decoration: underline;
+}
+
+/* hamburger caché sur desktop */
+.nav-button-open {
+  display: none;
+}
+
+/* ---------- VERSION MOBILE (< 980px) ---------- */
+
+@media (max-width: 980px) {
+  #header {
+      background-color: #d3d3d3;
+      padding: 10px 0;
+  }
+
+  /* bouton hamburger en haut à droite */
+  .nav-button-open {
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+  }
+
+  .nav-button-open img {
+      width: 45px;
+      height: auto;
+  }
+
+  /* menu replié */
+  #header nav {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    background-color: #444;
+}
+
+/* ouverture du menu */
+#header:target nav {
+    max-height: 1000px;  /* largement suffisant pour tout afficher */
+}
+
+
+  #header nav ul {
+      flex-direction: column;
+      padding: 10px 0;
+  }
+
+  #header nav li {
+      padding: 10px 20px;
+  }
+
+  #header nav a {
+      color: white; /* texte blanc dans le menu vertical */
+      font-size: 18px;
+  }
+
+  /* ouverture du menu quand le header devient :target */
+  
+
+  /* cacher le hamburger quand le menu est ouvert */
+  #header:target .nav-button-open {
+      display: none;
+  }
+}
+
+/* ---------- CONTENU ---------- */
+
+.content {
+  padding: 40px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}

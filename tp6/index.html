@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP6 - Animations & Keyframes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+      <h1>Travaux Pratiques 6</h1>
+      <p>Animations CSS avancées et Keyframes</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../tp1/index.html">TP1</a></li>
+      <li><a href="../tp2/index.html">TP2</a></li>
+      <li><a href="../tp3/index.html">TP3</a></li>
+      <li><a href="../tp4/index.html">TP4</a></li>
+      <li><a href="../tp5/index.html">TP5</a></li>
+      <li><a href="index.html" class="active">TP6</a></li>
+      <li><a href="../tp7/index.html">TP7</a></li>
+      <li><a href="../tp8/index.html">TP8</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <p><a href="../index.html">← Retour à l'accueil</a></p>
+    </section>
+
+    <article class="exercice">
+      <h2>Exercice 1 : Effet Rideau (Transition)</h2>
+      
+      <div class="demo-container">
+        <iframe src="ex1/index.html" title="Effet Rideau"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> J'ai créé un effet de dévoilement ("Rideau"). J'ai superposé un bloc noir (<code>position: absolute</code>) sur une image, puis j'ai utilisé <code>transform: translateX(-100%)</code> au survol pour le faire glisser hors du cadre.<br>
+          <strong>Difficulté :</strong> Niveau <strong>débutant</strong>. La subtilité réside dans l'utilisation de <code>overflow: hidden</code> sur le parent pour que le rideau disparaisse proprement.<br>
+          <strong>Intérêt :</strong> Cet exercice permet de bien comprendre la différence entre <code>transition</code> (qui lisse le mouvement sur une durée) et <code>transform</code> (qui modifie la géométrie).<br>
+          <strong>Qualité :</strong> L'animation est fluide grâce à la fonction de timing <code>ease-in-out</code>.
+        </p>
+      </div>
+    </article>
+
+    <article class="exercice">
+      <h2>Exercice 5 : </h2>
+      
+      <div class="demo-container">
+        <iframe src="ex5/index.html" title="SCP Terminal"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> J'ai créé une bannière thématique (Fondation SCP) imitant un écran de terminal sécurisé. J'ai utilisé des <strong>gradients CSS avancés</strong> (<code>repeating-linear-gradient</code>) pour créer les hachures d'avertissement et l'effet de lignes "CRT" (écran cathodique) sans utiliser d'images lourdes.<br>
+          <strong>Difficulté :</strong> Niveau <strong>DIFFICILE</strong>. Le défi était de superposer les couches (background, contenu, overlay CRT) avec <code>z-index</code> et <code>position: absolute</code> tout en gardant le texte lisible.<br>
+          <strong>Intérêt :</strong> Cet exercice montre comment créer une ambiance forte uniquement avec du code CSS et une animation <code>@keyframes</code> de scintillement.<br>
+          <strong>Qualité :</strong> Le JavaScript ajoute une touche finale avec un effet "machine à écrire" (Typewriter) qui simule le chargement des données de l'agent <em>Azad Oztopal</em> en temps réel.
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>Développement Front MMI 2</p>
+  </footer>
+
+</body>
+</html>

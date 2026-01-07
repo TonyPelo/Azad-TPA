@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+
+.parallax {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.parallax .bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 110%;
+  height: auto;
+  transform: translate(-50%, 0);
+  will-change: transform;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+
+.text {
+  padding: 60px 40px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.text h2 {
+  margin-bottom: 20px;
+}
+

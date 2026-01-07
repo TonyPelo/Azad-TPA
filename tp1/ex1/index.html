@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TP1 – Exercice 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="sheet">
+
+    
+    <section class="section-block">
+      
+      <div class="block-title">
+        <h2>FLEX CONTAINER<br><span>(élément parent)</span></h2>
+        <div class="display-boxes">
+          <div class="display-box">display: flex</div>
+          <div class="display-box">display: inline-flex</div>
+        </div>
+      </div>
+
+      
+      <table class="flex-table">
+        <thead>
+          <tr>
+            <th>flex-direction</th>
+            <th>flex-wrap</th>
+            <th colspan="2">justify-content<br><span>Axe principal (Main)</span></th>
+            <th colspan="2">align-items<br><span>Axe secondaire (Cross)</span></th>
+            <th colspan="2">align-content</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="green">
+              <span class="red">row</span><br>
+              row-reverse<br>
+              column<br>
+              column-reverse
+            </td>
+
+            <td class="green">
+              <span class="red">no-wrap</span><br>
+              wrap<br>
+              wrap-reverse
+            </td>
+
+            <td colspan="2" class="green">
+              <span class="red">flex-start</span><br>
+              flex-end<br>
+              center<br>
+              space-between<br>
+              space-around<br>
+              space-evenly
+            </td>
+
+            <td colspan="2" class="green">
+              <span class="green">flex-start</span><br>
+              flex-end<br>
+              center<br>
+              baseline<br>
+              <span class="red">stretch</span>
+            </td>
+
+            <td colspan="2" class="green">
+              <span class="green">flex-start</span><br>
+              flex-end<br>
+              center<br>
+              space-between<br>
+              space-around<br>
+              <span class="red">stretch</span>
+            </td>
+          </tr>
+
+          <tr class="sub-title">
+            <td colspan="2">flex-flow</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="green">flex-direction + flex-wrap</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    
+    <section class="section-block">
+      
+      <div class="block-title child">
+        <h2>FLEX ITEMS<br><span>(élément enfant)</span></h2>
+        <div class="items-zone">
+          <div class="item">ITEM 1</div>
+          <div class="item">ITEM 2</div>
+          <div class="item">ITEM 3</div>
+        </div>
+      </div>
+
+      
+      <table class="items-table">
+        <tbody>
+          <tr>
+            <th>order</th>
+            <td colspan="2"><span class="red">0</span></td>
+          </tr>
+
+          <tr>
+            <th>flex-grow</th>
+            <td colspan="2"><span class="red">0</span></td>
+          </tr>
+
+          <tr class="flex-shrink-row">
+            <th>flex-shrink</th>
+            <td><span class="red">1</span></td>
+            <td class="big-cell">
+              <span class="green">flex :</span>
+              <span class="red">0 1 auto</span>
+            </td>
+          </tr>
+
+          <tr>
+            <th>flex-basis</th>
+            <td colspan="2"><span class="red">auto</span></td>
+          </tr>
+
+          <tr>
+            <th>align-self</th>
+            <td colspan="2"><span class="red">auto</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

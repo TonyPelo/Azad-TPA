@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP5 - Responsive & Effets Visuels</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+      <h1>Travaux Pratiques 5</h1>
+      <p>Interaction Scroll & Effets Visuels</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../tp1/index.html">TP1</a></li>
+      <li><a href="../tp2/index.html">TP2</a></li>
+      <li><a href="../tp3/index.html">TP3</a></li>
+      <li><a href="../tp4/index.html">TP4</a></li>
+      <li><a href="index.html" class="active">TP5</a></li>
+      <li><a href="../tp6/index.html">TP6</a></li>
+      <li><a href="../tp7/index.html">TP7</a></li>
+      <li><a href="../tp8/index.html">TP8</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <p><a href="../index.html">← Retour à l'accueil</a></p>
+    </section>
+
+    <article class="exercice">
+      <h2>Exercice 2 : Interaction JavaScript au Scroll</h2>
+      
+      <div class="demo-container">
+        <iframe src="ex2/index.html" title="Scroll Color Change"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> J'ai utilisé l'événement JavaScript <code>window.scroll</code> pour détecter le défilement. J'ai appris à calculer la position de l'utilisateur en pourcentage et à manipuler le style CSS dynamiquement.<br>
+          <strong>Difficulté :</strong> Niveau <strong>intermédiaire</strong>. La logique mathématique pour transformer une position de scroll en une valeur de couleur demande de la réflexion.<br>
+          <strong>Intérêt :</strong> Ce type d'interaction rend le site vivant. C'est une introduction aux effets de "Scrollytelling".<br>
+          <strong>Qualité :</strong> L'animation est fluide grâce à l'ajout de la propriété CSS <code>transition: linear</code>.
+        </p>
+      </div>
+    </article>
+
+    <article class="exercice">
+      <h2>Exercice 6 : Effet Parallaxe (Javascript)</h2>
+      
+      <div class="demo-container">
+        <iframe src="ex6/index.html" title="Effet Parallaxe"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> J'ai conçu une page immersive où l'image de fond défile plus lentement que le texte. J'ai utilisé des <strong>attributs personnalisés HTML <code>data-speed</code></strong>. C'est cette valeur que le JavaScript récupère (via <code>dataset.speed</code>) pour multiplier le déplacement : plus le chiffre est bas, plus l'image bouge lentement.<br>
+          <strong>Difficulté :</strong> Niveau <strong>moyen</strong>. La complexité réside dans la formule : <code>(scrollY - offsetTop) * speed</code>. C'est ce calcul qui synchronise le mouvement de l'image avec le scroll.<br>
+          <strong>Intérêt :</strong> L'utilisation de <code>data-speed</code> rend le code modulaire : je peux changer la vitesse de l'effet directement dans le HTML sans toucher au JavaScript.<br>
+          <strong>Qualité :</strong> Le rendu est fluide et l'effet ajoute une réelle profondeur sans perturber la lecture.
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>Développement Front MMI 2</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP3 - Media Queries & Menu Responsive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+      <h1>Travaux Pratiques 3</h1>
+      <p>Responsive Design et Adaptabilité</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../tp1/index.html">TP1</a></li>
+      <li><a href="../tp2/index.html">TP2</a></li>
+      <li><a href="index.html" class="active">TP3</a></li> <li><a href="../tp4/index.html">TP4</a></li>
+      <li><a href="../tp5/index.html">TP5</a></li>
+      <li><a href="../tp6/index.html">TP6</a></li>
+      <li><a href="../tp7/index.html">TP7</a></li>
+      <li><a href="../tp8/index.html">TP8</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <p><a href="../index.html">← Retour à l'accueil</a></p>
+    </section>
+
+    <article class="exercice">
+      <h2>Exercice 1 :Media Queries</h2>
+      
+      <div class="demo-container">
+        <iframe src="EX1.html" title="Media Queries Couleurs"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> J'ai mis en pratique les <strong>Media Queries</strong> (`@media`). J'ai défini des points de rupture (breakpoints) à 960px et 480px pour modifier dynamiquement les propriétés CSS (ici la couleur de fond) selon la largeur de l'écran.<br>
+          <strong>Difficulté :</strong> Niveau <strong>débutant</strong>. Le concept est simple : une condition de largeur déclenche un style différent.<br>
+          <strong>Intérêt :</strong> C'est le fondement technique absolu du Responsive Web Design. Sans Media Queries, il n'y a pas d'adaptation mobile possible.<br>
+          <strong>Qualité :</strong> Le résultat est immédiat : au redimensionnement de la fenêtre, le bloc réagit instantanément, prouvant que la feuille de style conditionnelle fonctionne.
+        </p>
+      </div>
+    </article>
+
+    <article class="exercice">
+      <h2>Exercice 3 : Menu Burger </h2>
+      
+      <div class="demo-container">
+        <iframe src="ex3/index.html" title="Menu Burger CSS"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> J'ai transformé un menu horizontal classique (Flexbox) en un menu vertical "Burger" pour mobile. J'ai utilisé une astuce avancée avec le pseudo-sélecteur CSS <code>:target</code> pour gérer l'ouverture et la fermeture du menu sans utiliser une seule ligne de JavaScript.<br>
+          <strong>Difficulté :</strong> Niveau <strong>intermédiaire</strong>. Gérer le positionnement absolu du bouton burger, le masquage du menu (`max-height: 0`) et l'animation d'ouverture demande de la précision.<br>
+          <strong>Intérêt :</strong> Le "Menu Burger" est le standard de navigation sur mobile. Savoir le réaliser en CSS pur permet de créer des interfaces légères et performantes.<br>
+          <strong>Qualité :</strong> Le menu est fluide et l'animation de déroulement (`transition`) rend l'expérience utilisateur agréable.
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>Développement Front MMI 2</p>
+  </footer>
+
+</body>
+</html>

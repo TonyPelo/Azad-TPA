@@ -1,0 +1,265 @@
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+
+  
+  background-color: #eee;
+  background-image:
+    url("ressources/wrap.gif"),
+    linear-gradient(#333, #333);
+  background-repeat:
+    repeat-x,
+    repeat-x;
+  background-position:
+    top left,
+    bottom left;
+  background-size:
+    auto,
+    100% 129px;  
+}
+
+
+
+
+
+#page {
+  width: 960px;
+  margin: 95px auto 79px; 
+  background: #fff ;
+}
+
+
+
+
+
+
+header {
+  position: relative;
+  height: 192px;                
+  
+}
+
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 960px;
+  height: 192px;
+  background: url("ressources/header.gif") no-repeat left top;
+  
+}
+
+
+header p,
+header ul {
+  position: absolute;
+  z-index: 3; 
+}
+
+
+header p {
+  top: -20px;        
+  left: 210px;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+    font-weight: bold; 
+
+}
+
+
+header ul {
+  top: -25px;        
+  right: 40px;
+  display: flex;     
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header li a,
+header li a:visited {
+  color: #fff;       
+  text-decoration: none;
+  font-size: 12px;
+}
+
+header li a:hover {
+  color: #300;       
+}
+
+
+
+#content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  padding: 0px 40px 40px; 
+margin-top: -70px;   
+
+}
+
+
+
+#content > section {
+  flex: 1;
+  padding-left: 90px; 
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+
+#content h1 {
+  font-size: 22px;
+    margin: 0 0 10px;
+
+}
+
+
+#content h2 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  padding-left: 55px;
+  background: url("ressources/h2_ornament.gif") no-repeat left center;
+}
+
+
+
+
+#content img {
+  float: left;
+  margin: 20px 25px 15px -60px; 
+  border: 4px solid #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+
+
+#content p {
+  overflow: visible; 
+}
+
+
+
+
+aside {
+  width: 192px;
+  
+  padding: 90px 18px 25px 24px;   
+  font-size: 11px;
+  line-height: 1.5;
+  background: #fff url("ressources/page.gif") right top;
+  border-right: 1px solid #e0e0e0;
+  color: #333;
+}
+
+
+
+aside h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+
+aside a {
+  text-decoration: underline;
+}
+
+
+
+
+
+footer {
+  position: relative;
+  width: 960px;
+  height: 129px;
+  margin: 0 auto;
+  background: url("ressources/footer.gif") no-repeat center top;
+  color: #eee;
+  font-size: 11px;
+  z-index: 2; 
+}
+
+footer p {
+  position: absolute;
+  left: 65px;
+  bottom: 18px;
+  margin: 0;
+}
+
+
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 960px;
+  height: 129px;
+  transform: translateX(-50%);
+  background: url("ressources/footer.gif") no-repeat center top;
+}
+
+
+
+
+
+footer a:link,
+footer a:visited {
+  color: #c99;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+#content h2 {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 40px 0 20px;
+  padding-left: 190px;  
+  background: url("ressources/h2_ornament.gif") no-repeat left center;
+}
+
+
+aside p,
+aside strong,
+aside a {
+  color: #300; 
+}
+
+
+aside a:link,
+aside a:visited {
+  color: #300;
+  text-decoration: underline;
+}
+
+
+#content h1 {
+  color: #633; 
+}
+
+
+#content h2 {
+  color: #999;
+}
+

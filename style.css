@@ -1,0 +1,271 @@
+:root {
+  --couleur-fond: #0f172a;      /* bleu nuit */
+  --couleur-carte: #0b1120;     /* bleu très foncé */
+  --couleur-accent: #38bdf8;    /* bleu clair */
+  --couleur-accent-2: #22c55e;  /* vert */
+  --couleur-texte: #e5e7eb;     /* gris très clair */
+  --couleur-texte-second: #9ca3af;
+}
+
+/* Reset léger */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base du document */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--couleur-texte);
+  background: radial-gradient(circle at top, #1e293b 0%, #020617 60%);
+  padding: 0 1rem;
+}
+
+/* Conteneur centré */
+body > header,
+body > nav,
+body > main,
+body > footer {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* Header Principal */
+header {
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--couleur-accent), var(--couleur-accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--couleur-texte-second);
+  font-size: 0.95rem;
+}
+
+/* Ligne décorative via ::after */
+header::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  margin: 1rem auto 0;
+  background: linear-gradient(90deg, var(--couleur-accent), var(--couleur-accent-2));
+  border-radius: 999px;
+}
+
+/* Titres globaux */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 1.8rem; margin-top: 1.5rem; }
+h2 { font-size: 1.4rem; margin-top: 1.5rem; color: #f9fafb; }
+p { margin-bottom: 0.75rem; }
+
+/* Navigation principale */
+nav {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 999px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.4rem 0.8rem;
+  gap: 0.25rem;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 0.45rem 0.9rem;
+  color: var(--couleur-texte);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active,
+nav a.active {
+  background: radial-gradient(circle at top left, var(--couleur-accent), #0f172a);
+  color: #f9fafb;
+  transform: translateY(-1px);
+}
+
+/* Sections principales */
+main {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
+  padding: 2rem 1.5rem;
+  border-radius: 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+section {
+  margin-bottom: 1.75rem;
+}
+
+#presentation,
+#acquis,
+#ameliorations {
+  background-color: rgba(15, 23, 42, 0.85);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+/* Liste des TP sur l'accueil (Grid responsive) */
+#liste-tp ul {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.6rem;
+}
+
+#liste-tp li {
+  background: radial-gradient(circle at top, #0b1120 0%, #020617 80%);
+  border-radius: 0.6rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+#liste-tp a {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  color: var(--couleur-texte);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Effet hover sur les cartes TP */
+#liste-tp li:hover,
+#liste-tp li:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.9);
+  border-color: var(--couleur-accent);
+}
+
+#liste-tp a:hover {
+  color: #f9fafb;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  padding: 1rem 0 2rem;
+}
+
+
+/* ===== BLOCS D'EXERCICE (PAGES TP) ===== */
+
+/* Conteneur principal de l'exercice */
+.exercice {
+  background-color: var(--couleur-carte);
+  border: 1px solid rgba(56, 189, 248, 0.2); /* Bordure subtile bleu clair */
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.exercice h2 {
+  color: var(--couleur-accent);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 0.5rem;
+}
+
+/* Zone du commentaire personnel */
+.exercice-commentaire {
+  background: rgba(34, 197, 94, 0.1); /* Fond vert très léger */
+  border-left: 4px solid var(--couleur-accent-2); /* Barre verte */
+  padding: 1rem;
+  border-radius: 4px;
+  color: var(--couleur-texte);
+  margin-top: 1rem;
+}
+
+.exercice-commentaire h3 {
+  font-size: 1rem;
+  color: var(--couleur-accent-2);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.exercice-commentaire p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* --- Styles pour les DÉMOS INTÉGRÉES (Iframes) --- */
+.demo-container {
+  width: 100%;
+  height: 400px; /* Hauteur fixe pour voir l'exercice */
+  border: 2px solid #334155; /* Bordure gris foncé */
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: white; /* Fond blanc (car tes exos sont souvent sur fond blanc) */
+  margin-bottom: 1rem;
+}
+
+.demo-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+
+/* ===== MEDIA QUERIES GLOBALES ===== */
+
+/* Layout Responsive pour les exercices sur grands écrans */
+@media screen and (min-width: 900px) {
+  /* On ne met plus en 2 colonnes car la démo prend de la place, 
+     on garde un affichage vertical (Démo au-dessus, texte en dessous) 
+     pour une meilleure lisibilité. */
+  .exercice {
+     /* Si tu veux revenir à 2 colonnes, décommente ci-dessous */
+     /* display: grid; grid-template-columns: 3fr 2fr; gap: 1.5rem; align-items: start; */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body { padding: 0 2rem; }
+  main { padding: 2.2rem 2rem; }
+  header h1 { font-size: 2.2rem; }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP8 - Canvas & Animations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+      <h1>Travaux Pratiques 8</h1>
+      <p>Initiation à Canvas et à l'interactivité</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../tp1/index.html">TP1</a></li>
+      <li><a href="../tp2/index.html">TP2</a></li>
+      <li><a href="../tp3/index.html">TP3</a></li>
+      <li><a href="../tp4/index.html">TP4</a></li>
+      <li><a href="../tp5/index.html">TP5</a></li>
+      <li><a href="../tp6/index.html">TP6</a></li>
+      <li><a href="../tp7/index.html">TP7</a></li>
+      <li><a href="index.html" class="active">TP8</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <p><a href="../index.html">← Retour à l'accueil</a></p>
+    </section>
+
+    <article class="exercice">
+      <h2>Exercice 1 : Animation Sprite </h2>
+      <div class="demo-container">
+        <iframe src="ex1/index.html" title="Jeu Canvas"></iframe>
+      </div>
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          Dans ce premier exercice, j'ai mis en place l'affichage d'un personnage via une <strong>Sprite Sheet</strong>.
+          L'objectif était de contrôler ses déplacements (X, Y) grâce aux écouteurs d'événements <code>keydown</code>.
+          J'ai utilisé <code>ctx.drawImage</code> pour découper la bonne vignette en fonction de la direction choisie.
+        </p>
+      </div>
+    </article>
+
+    <article class="exercice">
+      <h2>Exercice 2 : Scrolling Infini </h2>
+      
+      <div class="demo-container">
+        <iframe src="ex2/index.html" title="Mario Scrolling"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          Ici, j'ai créé une illusion de mouvement continu. Le personnage court sur place (animation sprite), 
+          mais c'est le décor qui bouge.
+          Pour réaliser ce <strong>scrolling infini</strong>, je dessine l'image de fond deux fois côte à côte. 
+          Dès que la première image sort de l'écran (coordonnée X négative), elle est repositionnée à 0. 
+          Le tout est fluide grâce à l'utilisation de <code>requestAnimationFrame</code>.
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>Développement Front MMI 2</p>
+  </footer>
+
+</body>
+</html>

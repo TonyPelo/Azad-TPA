@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP2 - Flexbox & Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* --- CSS SPÉCIFIQUE POUR L'AFFICHAGE COMPARATIF --- */
+    
+    /* Conteneur flexible pour aligner les 3 iframes */
+    .comparatif-container {
+        display: flex;
+        flex-wrap: wrap; /* Passe à la ligne sur mobile */
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    /* Boîte individuelle */
+    .version-box {
+        flex: 1 1 300px; /* Largeur min 300px */
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Titre de la version */
+    .version-box h3 {
+        text-align: center;
+        margin-top: 0;
+        font-size: 1.1rem;
+        color: #333;
+        border-bottom: 2px solid #0af;
+        padding-bottom: 10px;
+    }
+
+    /* Iframe */
+    .version-box iframe {
+        width: 100%;
+        height: 350px;
+        border: 1px solid #eee;
+        display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+      <h1>Travaux Pratiques 2</h1>
+      <p>Structures de page : Flexbox vs CSS Grid</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../tp1/index.html">TP1</a></li>
+      <li><a href="index.html" class="active">TP2</a></li>
+      <li><a href="../tp3/index.html">TP3</a></li>
+      <li><a href="../tp4/index.html">TP4</a></li>
+      <li><a href="../tp5/index.html">TP5</a></li>
+      <li><a href="../tp6/index.html">TP6</a></li>
+      <li><a href="../tp7/index.html">TP7</a></li>
+      <li><a href="../tp8/index.html">TP8</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <p><a href="../index.html">← Retour à l'accueil</a></p>
+    </section>
+
+    <article class="exercice">
+      <h2>Exercice 2 : Comparatif Flex vs Grid</h2>
+      
+      <p>L'objectif était de reproduire la même mise en page avec trois techniques différentes pour en comprendre les nuances.</p>
+
+      <div class="comparatif-container">
+        
+        <div class="version-box">
+            <h3>1. Grid Classique</h3>
+            <iframe src="ex2/ex2.1/index.html" title="Grid Lines"></iframe>
+        </div>
+
+        <div class="version-box">
+            <h3>2. Grid Template Areas</h3>
+            <iframe src="ex2/ex2.2/index.html" title="Grid Areas"></iframe>
+        </div>
+
+        <div class="version-box">
+            <h3>3. Flexbox</h3>
+            <iframe src="ex2/ex2.3/index.html" title="Flexbox"></iframe>
+        </div>
+
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> Cet exercice m'a permis de manipuler <code>grid-template-columns</code> (Grid Classique), <code>grid-template-areas</code> (Grid Area) et <code>display: flex</code> imbriqués.<br>
+          <strong>Difficulté :</strong> La version <strong>Flexbox (ex2.3)</strong> était la plus complexe à structurer car elle nécessitait d'ajouter des divs HTML supplémentaires pour gérer les alignements 2D. À l'inverse, <strong>Grid Area (ex2.2)</strong> était la plus intuitive.<br>
+          <strong>Intérêt :</strong> Comparer ces méthodes prouve que CSS Grid est bien plus adapté que Flexbox pour définir l'architecture globale d'une page (Header, Sidebar, Content, Footer).<br>
+          <strong>Qualité :</strong> Le rendu visuel est identique, mais le code de la version "Grid Area" est le plus propre et le plus facile à maintenir.
+        </p>
+      </div>
+    </article>
+
+    <article class="exercice">
+      <h2>Exercice 3 : Puzzle Grid</h2>
+      
+      <div class="demo-container">
+        <iframe src="ex3/index.html" title="Exercice 3 Puzzle"></iframe>
+      </div>
+
+      <div class="exercice-commentaire">
+        <h3>Mon analyse</h3>
+        <p>
+          <strong>Connaissances :</strong> J'ai utilisé <code>grid-template-areas</code> pour placer précisément 9 éléments dans une grille complexe, combiné à Flexbox pour le centrage interne.<br>
+          <strong>Difficulté :</strong> Niveau <strong>moyen</strong>. Il fallait réussir à traduire le schéma visuel du puzzle en une syntaxe de grille CSS (chaînes de caractères).<br>
+          <strong>Intérêt :</strong> Cet exercice apprend à maîtriser le positionnement explicite. On ne dépend plus de l'ordre HTML, on place les éléments visuellement via le CSS.<br>
+          <strong>Qualité :</strong> L'utilisation de <code>aspect-ratio: 1</code> et <code>border-radius: 50%</code> garantit des formes géométriques parfaites sur tous les écrans.
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>Développement Front MMI 2</p>
+  </footer>
+
+</body>
+</html>

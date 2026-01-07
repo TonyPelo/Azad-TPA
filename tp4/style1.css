@@ -1,0 +1,72 @@
+/* mise en forme de base  */
+
+/* On annule les marges par défaut */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Chaque bloc de texte */
+div {
+  width: 600px;               /* largeur fixée */
+  margin-left: 250px;         /* à 250px du bord gauche */
+  margin-bottom: 40px;        /* espace entre les blocs */
+}
+
+/* Centrer le texte des titres */
+h2 {
+  text-align: center;
+}
+
+/* Bordure des paragraphes */
+p {
+  border: 3px solid;
+  padding: 10px;
+}
+
+
+/* menu fixe à gauche  */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;      /* fixe à gauche */
+  top: 100px;           /* décalé du haut */
+  left: 0;              /* collé à gauche */
+  width: 200px;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Couleurs différentes pour chaque item du menu */
+ul li:nth-child(1) a { background-color: #e74c3c; } /* rouge */
+ul li:nth-child(2) a { background-color: #27ae60; } /* vert */
+ul li:nth-child(3) a { background-color: #3498db; } /* bleu */
+
+/* Même couleur sur titre et bordure du paragraphe correspondant */
+#paragraphe1 h2, #paragraphe1 p { color: #e74c3c; border-color: #e74c3c; }
+#paragraphe2 h2, #paragraphe2 p { color: #27ae60; border-color: #27ae60; }
+#paragraphe3 h2, #paragraphe3 p { color: #3498db; border-color: #3498db; }
+
+
+/*  les paragraphes disparaissent du flux  */
+p {
+  display: none;
+}
+
+
+/*  seul le paragraphe ciblé s'affiche  */
+div:target p {
+  display: block;
+}
